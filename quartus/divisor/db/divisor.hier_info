@@ -1,0 +1,42 @@
+|divisor
+clk_50mhz => out_100hz.CLK
+clk_50mhz => count_reg[0].CLK
+clk_50mhz => count_reg[1].CLK
+clk_50mhz => count_reg[2].CLK
+clk_50mhz => count_reg[3].CLK
+clk_50mhz => count_reg[4].CLK
+clk_50mhz => count_reg[5].CLK
+clk_50mhz => count_reg[6].CLK
+clk_50mhz => count_reg[7].CLK
+clk_50mhz => count_reg[8].CLK
+clk_50mhz => count_reg[9].CLK
+clk_50mhz => count_reg[10].CLK
+clk_50mhz => count_reg[11].CLK
+clk_50mhz => count_reg[12].CLK
+clk_50mhz => count_reg[13].CLK
+clk_50mhz => count_reg[14].CLK
+clk_50mhz => count_reg[15].CLK
+clk_50mhz => count_reg[16].CLK
+clk_50mhz => count_reg[17].CLK
+rst_50mhz => out_100hz.ACLR
+rst_50mhz => count_reg[0].ACLR
+rst_50mhz => count_reg[1].ACLR
+rst_50mhz => count_reg[2].ACLR
+rst_50mhz => count_reg[3].ACLR
+rst_50mhz => count_reg[4].ACLR
+rst_50mhz => count_reg[5].ACLR
+rst_50mhz => count_reg[6].ACLR
+rst_50mhz => count_reg[7].ACLR
+rst_50mhz => count_reg[8].ACLR
+rst_50mhz => count_reg[9].ACLR
+rst_50mhz => count_reg[10].ACLR
+rst_50mhz => count_reg[11].ACLR
+rst_50mhz => count_reg[12].ACLR
+rst_50mhz => count_reg[13].ACLR
+rst_50mhz => count_reg[14].ACLR
+rst_50mhz => count_reg[15].ACLR
+rst_50mhz => count_reg[16].ACLR
+rst_50mhz => count_reg[17].ACLR
+clk_out <= out_100hz.DB_MAX_OUTPUT_PORT_TYPE
+
+

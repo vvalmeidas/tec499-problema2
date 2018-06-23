@@ -1,0 +1,24 @@
+module Diviseur(clk,rst,clk_out);
+input clk,rst;
+output clk_out;
+reg[15:0] counter, clk_temp;
+ 
+always @(posedge clk or negedge rst)
+begin
+	if(!rst) 
+		begin
+			counter<=16'd0;
+			clk_temp<=0;
+		end
+	else
+		begin
+			if(counter==16'd5000)
+			begin
+				counter<=16'd0;
+				clk_temp<=~clk_temp;
+			end
+		end
+counter<=counter+1;
+end
+assign clk_out = clk_temp;
+endmodule

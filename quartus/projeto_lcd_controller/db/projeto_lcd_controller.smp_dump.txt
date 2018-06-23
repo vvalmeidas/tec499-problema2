@@ -1,0 +1,10 @@
+
+State Machine - |inicializador_lcd|estado
+Name estado.ENTRY_MODE_SET estado.WAIT_153MS estado.DISPLAY_CLEAR estado.DISPLAY_ONOFF estado.WAIT_39US estado.FUNCTION_SET estado.WAIT_30MS 
+estado.WAIT_30MS 0 0 0 0 0 0 0 
+estado.FUNCTION_SET 0 0 0 0 0 1 1 
+estado.WAIT_39US 0 0 0 0 1 0 1 
+estado.DISPLAY_ONOFF 0 0 0 1 0 0 1 
+estado.DISPLAY_CLEAR 0 0 1 0 0 0 1 
+estado.WAIT_153MS 0 1 0 0 0 0 1 
+estado.ENTRY_MODE_SET 1 0 0 0 0 0 1 
