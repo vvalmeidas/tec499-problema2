@@ -1,0 +1,20 @@
+import serial
+s = ' '
+
+def verifica_portas(): #verifica e retorna quais portas COM estão ativas
+    portas_ativas = []
+
+    for numero in range(10):
+        try:
+            porta = serial.Serial('COM' + str(numero))
+            portas_ativas.append((numero, objeto_verifica.portstr))
+            porta.close()
+        except serial.SerialException:
+            pass
+    return portas_ativas
+
+numPortas = verifica_portas()
+s = ''.join(numPortas)
+s = 'Portas ' + s
+print(s)
+
