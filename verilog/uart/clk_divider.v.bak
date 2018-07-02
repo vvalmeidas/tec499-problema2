@@ -1,2 +1,0 @@
-module clk_divider (clk_in, rst, clk_out);
-endmodules
