@@ -1,0 +1,20 @@
+
+State Machine - |uart_controller|uart_rx:uart_rx|state
+Name state.done state.checking state.receiving state.idle state.failed 
+state.idle 0 0 0 0 0 
+state.receiving 0 0 1 1 0 
+state.checking 0 1 0 1 0 
+state.done 1 0 0 1 0 
+state.failed 0 0 0 1 1 
+
+State Machine - |uart_controller|fifo_controller:fifo_controller|state_2
+Name state_2.a state_2.c state_2.b 
+state_2.a 0 0 0 
+state_2.b 1 0 1 
+state_2.c 1 1 0 
+
+State Machine - |uart_controller|fifo_controller:fifo_controller|state
+Name state.a state.c state.b 
+state.a 0 0 0 
+state.b 1 0 1 
+state.c 1 1 0 

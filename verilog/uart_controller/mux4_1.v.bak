@@ -1,0 +1,3 @@
+module mux4_1 (a,b,c,d,sel,out);
+
+endmodule
