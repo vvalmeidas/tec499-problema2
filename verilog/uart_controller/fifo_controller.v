@@ -11,11 +11,12 @@ output [7:0] 	data_out;
 
 reg wrreq;
 reg [1:0] state;
+reg counter ;
 
 reg rdreq;
 reg [1:0] state_2;
 
-localparam a=2'd0, b=2'd1, c=2'd2;
+localparam a=2'd0, b=2'd1, c=2'd2, d=2'd3;
 
 always@(posedge clk) begin
 	if(rst) begin
@@ -25,7 +26,7 @@ always@(posedge clk) begin
 	else begin
 		case(state)
 			a: begin
-				wrreq <= 1'd0;
+				wrreq <= 1'b0;
 				if(rx_ready) begin
 					state <= b;
 				end
@@ -36,16 +37,19 @@ always@(posedge clk) begin
 			
 			b: begin
 				wrreq <= 1'b1;
-				state <= c;
+				state <= d;
 			end
 			c: begin
-				wrreq <= 1'd0;
+				wrreq <= 1'b0;
 				if(rx_ready) begin
 					state <= c;
 				end
 				else begin
 					state <= a;
 				end
+			d: begin
+				wrreq <= 1'b1;
+				state <= c;
 			end
 		endcase
 	end
@@ -55,12 +59,12 @@ end
 always@(posedge clk) begin
 	if(rst) begin
 		state_2 <= a;
-		rdreq <= 1'd0;
+		rdreq <= 1'b0;
 	end
 	else begin
 		case(state_2)
 			a: begin
-				rdreq <= 1'd0;
+				rdreq <= 1'b0;
 				if(read) begin
 					state_2 <= b;
 				end
@@ -71,16 +75,20 @@ always@(posedge clk) begin
 			
 			b: begin
 				rdreq <= 1'b1;
-				state_2 <= c;
+				state_2 <= d;
 			end
 			c: begin
-				rdreq <= 1'd0;
+				rdreq <= 1'b0;
 				if(read) begin
 					state_2 <= c;
 				end
 				else begin
 					state_2 <= a;
 				end
+			end
+			d: begin
+				rdreq <= 1'b1;
+				state_2 <= c;
 			end
 		endcase
 	end
